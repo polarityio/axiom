@@ -1,0 +1,169 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Axiom Integration Styles
+// Prefix: axm-
+// Color strategy: use opacity on inherited text color for secondary/neutral
+// elements so the overlay renders correctly on both dark and light themes.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// ── Deep link row ─────────────────────────────────────────────────────────────
+.axm-deep-link-row {
+  margin-bottom: 4px;
+}
+
+.axm-deep-link {
+  font-size: 11px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+  }
+}
+
+// ── Elapsed time badge ────────────────────────────────────────────────────────
+.axm-elapsed {
+  font-size: 10px;
+  opacity: 0.5;
+  margin-left: 4px;
+}
+
+// ── APL query monospace display ───────────────────────────────────────────────
+.axm-query-mono {
+  font-family: monospace;
+  font-size: 10px;
+  word-break: break-all;
+  opacity: 0.75;
+}
+
+// ── Run Query button row ──────────────────────────────────────────────────────
+.axm-run-row {
+  margin: 7px 0 5px;
+}
+
+.axm-run-btn {
+  font-size: 11px;
+}
+
+// ── Error / warning banners ───────────────────────────────────────────────────
+.axm-error {
+  margin: 5px 0;
+  font-size: 11px;
+  color: #ff4d4f;
+}
+
+.axm-no-results {
+  margin: 5px 0;
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+.axm-partial-warn {
+  font-size: 10px;
+  color: #faad14;
+  margin-left: 10px;
+}
+
+// ── Event cards ───────────────────────────────────────────────────────────────
+.axm-event-card {
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 3px;
+  margin: 6px 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.axm-event-num {
+  font-size: 10px;
+  opacity: 0.5;
+  padding: 4px 8px 2px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.12);
+}
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+.axm-tabs {
+  margin: 0;
+  padding: 0 6px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+
+  .nav-item {
+    margin-bottom: -1px;
+  }
+
+  .nav-link {
+    font-size: 10px;
+    padding: 3px 8px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 2px 2px 0 0;
+    text-decoration: none;
+    opacity: 0.6;
+
+    &.active {
+      opacity: 1;
+      border-color: rgba(128, 128, 128, 0.2);
+      border-bottom-color: transparent;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+// ── Fields tab body ───────────────────────────────────────────────────────────
+.axm-fields-body {
+  padding: 5px 8px 6px;
+}
+
+.axm-field-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1px;
+
+  .p-key {
+    flex-shrink: 0;
+    margin-right: 4px;
+  }
+
+  .axm-field-value {
+    word-break: break-all;
+    flex: 1;
+  }
+}
+
+// ── JSON tab body ─────────────────────────────────────────────────────────────
+.axm-json-body {
+  padding: 5px 8px 6px;
+}
+
+.axm-json-pre {
+  font-size: 10px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+// JSON syntax highlighting classes
+.axm-json-key     { color: #6baed6; }
+.axm-json-string  { color: #74c476; }
+.axm-json-number  { color: #fd8d3c; }
+.axm-json-boolean { color: #9e9ac8; }
+.axm-json-null    { opacity: 0.4; }
+
+// ── Footer ────────────────────────────────────────────────────────────────────
+.axm-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  padding-top: 4px;
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.axm-rows-examined {
+  font-size: 10px;
+  opacity: 0.45;
+}

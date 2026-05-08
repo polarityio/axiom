@@ -1,0 +1,17 @@
+{
+  "name": "axiom",
+  "version": "1.0.0",
+  "description": "Polarity integration for Axiom.co — APL-based forensic dataset search",
+  "main": "integration.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "polarity-integration-utils": "^3.1.8"
+  },
+  "overrides": {
+    "form-data": "^2.5.4",
+    "qs": "^6.14.1",
+    "tough-cookie": "^6.0.1"
+  }
+}

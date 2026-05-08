@@ -1,0 +1,2083 @@
+
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "httpResponse": {
+        "statusCode": 200,
+        "body": {
+          "format": "tabular",
+          "status": {
+            "elapsedTime": 1140730,
+            "minCursor": "0dho02tt0iups-08866d3988000c12-0004e992",
+            "maxCursor": "0dho02tt0iups-08866d3988000c12-0004e994",
+            "blocksExamined": 4,
+            "blocksCached": 0,
+            "blocksMatched": 0,
+            "blocksSkipped": 0,
+            "rowsExamined": 8388608,
+            "rowsMatched": 3586607,
+            "numGroups": 0,
+            "isPartial": false,
+            "cacheStatus": 1,
+            "minBlockTime": "2026-04-08T18:40:02Z",
+            "maxBlockTime": "2026-04-09T04:59:57Z",
+            "messages": [
+              {
+                "priority": "warn",
+                "count": 1,
+                "code": "license_limit_for_query_warning",
+                "msg": "Query time range is restricted due to license limit"
+              }
+            ]
+          },
+          "tables": [
+            {
+              "name": "0",
+              "sources": [
+                {
+                  "name": "sample-http-logs"
+                }
+              ],
+              "fields": [
+                {
+                  "name": "_sysTime",
+                  "type": "datetime"
+                },
+                {
+                  "name": "_time",
+                  "type": "datetime"
+                },
+                {
+                  "name": "content_type",
+                  "type": "string"
+                },
+                {
+                  "name": "geo.city",
+                  "type": "string"
+                },
+                {
+                  "name": "geo.country",
+                  "type": "string"
+                },
+                {
+                  "name": "id",
+                  "type": "string"
+                },
+                {
+                  "name": "is_tls",
+                  "type": "boolean"
+                },
+                {
+                  "name": "method",
+                  "type": "string"
+                },
+                {
+                  "name": "req_duration_ms",
+                  "type": "float"
+                },
+                {
+                  "name": "resp_body_size_bytes",
+                  "type": "integer"
+                },
+                {
+                  "name": "resp_header_size_bytes",
+                  "type": "integer"
+                },
+                {
+                  "name": "server_datacenter",
+                  "type": "string"
+                },
+                {
+                  "name": "status",
+                  "type": "string"
+                },
+                {
+                  "name": "uri",
+                  "type": "string"
+                },
+                {
+                  "name": "user_agent",
+                  "type": "string"
+                }
+              ],
+              "order": [
+                {
+                  "field": "_time",
+                  "desc": false
+                }
+              ],
+              "groups": [],
+              "range": {
+                "field": "_time",
+                "start": "2026-04-08T18:55:03.511066427Z",
+                "end": "2026-05-08T23:59:59Z"
+              },
+              "columns": [
+                [
+                  "2026-04-08T18:55:06.171208143Z",
+                  "2026-04-08T18:55:06.171208143Z",
+                  "2026-04-08T18:55:06.171208143Z"
+                ],
+                [
+                  "2026-04-08T18:55:04Z",
+                  "2026-04-08T18:55:04Z",
+                  "2026-04-08T18:55:04Z"
+                ],
+                [
+                  "text/html",
+                  "text/css",
+                  "image/jpeg"
+                ],
+                [
+                  "Chīrāla",
+                  "Los Ranchos de Albuquerque",
+                  "Barreiras"
+                ],
+                [
+                  "India",
+                  "United States",
+                  "Brazil"
+                ],
+                [
+                  "3eca3da7-8a89-40bf-a66f-bd9b255410ad",
+                  "54162c79-6922-4a63-9df7-ec3966e1011d",
+                  "9008746b-ab6a-48fc-a393-838227178fc8"
+                ],
+                [
+                  true,
+                  false,
+                  true
+                ],
+                [
+                  "GET",
+                  "GET",
+                  "GET"
+                ],
+                [
+                  1.0670452556511076,
+                  0.5039790626189883,
+                  1.2384481725285963
+                ],
+                [
+                  3597,
+                  4601,
+                  1901
+                ],
+                [
+                  77,
+                  27,
+                  27
+                ],
+                [
+                  "BWI",
+                  "SEA",
+                  "WDC"
+                ],
+                [
+                  "200",
+                  "500",
+                  "201"
+                ],
+                [
+                  "/api/v1/textdata/cnfigs",
+                  "/api/v1/customer/services",
+                  "/api/v1/textdata"
+                ],
+                [
+                  "Mozilla/5.0 (X11; OpenBSD i386) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36",
+                  "Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+                  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.45 Safari/535.19"
+                ]
+              ]
+            }
+          ],
+          "datasetNames": [
+            "sample-http-logs"
+          ],
+          "fieldsMetaMap": {
+            "sample-http-logs": [
+              {
+                "name": "req_duration_ms",
+                "type": "integer|float",
+                "unit": "ms",
+                "hidden": false,
+                "description": ""
+              },
+              {
+                "name": "resp_body_size_bytes",
+                "type": "integer",
+                "unit": "decmbytes",
+                "hidden": false,
+                "description": ""
+              },
+              {
+                "name": "resp_header_size_bytes",
+                "type": "integer",
+                "unit": "Kbits",
+                "hidden": false,
+                "description": ""
+              }
+            ]
+          }
+        },
+        "headers": {
+          "date": "Fri, 08 May 2026 18:55:04 GMT",
+          "content-type": "application/json",
+          "transfer-encoding": "chunked",
+          "connection": "close",
+          "cache-control": "no-cache, no-store, private, max-age=0",
+          "pragma": "no-cache",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "vary": "Origin",
+          "x-axiom-query-cost-gbms": "10722",
+          "x-axiom-trace-id": "2585131fa63193ca677e2628e0b3e04f",
+          "x-content-type-options": "nosniff",
+          "x-querylimit-limit": "36000000",
+          "x-querylimit-remaining": "35969096",
+          "x-querylimit-reset": "1780941539",
+          "x-ratelimit-limit": "600",
+          "x-ratelimit-remaining": "599",
+          "x-ratelimit-reset": "1778266563",
+          "x-ratelimit-scope": "organization"
+        },
+        "request": {
+          "uri": {
+            "protocol": "https:",
+            "slashes": true,
+            "auth": null,
+            "host": "api.axiom.co",
+            "port": 443,
+            "hostname": "api.axiom.co",
+            "hash": null,
+            "search": "?format=tabular",
+            "query": "format=tabular",
+            "pathname": "/v1/datasets/_apl",
+            "path": "/v1/datasets/_apl?format=tabular",
+            "href": "https://api.axiom.co/v1/datasets/_apl?format=tabular"
+          },
+          "method": "POST",
+          "headers": {
+            "Authorization": "Bearer xaat-2907e251-7d45-4c88-bda4-62c31ef25afa",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Content-Length": 130
+          }
+        }
+      }
+    },
+    "HTTP Response"
+  ]
+}
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "requestOptions": {
+        "route": "/v1/datasets/_apl?format=tabular",
+        "method": "POST",
+        "body": {
+          "apl": "['sample-http-logs'] | where * has \"GET\" | limit 3",
+          "startTime": "2025-01-01T00:00:00Z",
+          "endTime": "2026-05-08T23:59:59Z"
+        },
+        "url": "https://api.axiom.co/v1/datasets/_apl?format=tabular",
+        "headers": {
+          "Authorization": "**********",
+          "Content-Type": "application/json"
+        },
+        "json": true
+      },
+      "statusCode": 200,
+      "responseBody": {
+        "format": "tabular",
+        "status": {
+          "elapsedTime": 1140730,
+          "minCursor": "0dho02tt0iups-08866d3988000c12-0004e992",
+          "maxCursor": "0dho02tt0iups-08866d3988000c12-0004e994",
+          "blocksExamined": 4,
+          "blocksCached": 0,
+          "blocksMatched": 0,
+          "blocksSkipped": 0,
+          "rowsExamined": 8388608,
+          "rowsMatched": 3586607,
+          "numGroups": 0,
+          "isPartial": false,
+          "cacheStatus": 1,
+          "minBlockTime": "2026-04-08T18:40:02Z",
+          "maxBlockTime": "2026-04-09T04:59:57Z",
+          "messages": [
+            {
+              "priority": "warn",
+              "count": 1,
+              "code": "license_limit_for_query_warning",
+              "msg": "Query time range is restricted due to license limit"
+            }
+          ]
+        },
+        "tables": [
+          {
+            "name": "0",
+            "sources": [
+              {
+                "name": "sample-http-logs"
+              }
+            ],
+            "fields": [
+              {
+                "name": "_sysTime",
+                "type": "datetime"
+              },
+              {
+                "name": "_time",
+                "type": "datetime"
+              },
+              {
+                "name": "content_type",
+                "type": "string"
+              },
+              {
+                "name": "geo.city",
+                "type": "string"
+              },
+              {
+                "name": "geo.country",
+                "type": "string"
+              },
+              {
+                "name": "id",
+                "type": "string"
+              },
+              {
+                "name": "is_tls",
+                "type": "boolean"
+              },
+              {
+                "name": "method",
+                "type": "string"
+              },
+              {
+                "name": "req_duration_ms",
+                "type": "float"
+              },
+              {
+                "name": "resp_body_size_bytes",
+                "type": "integer"
+              },
+              {
+                "name": "resp_header_size_bytes",
+                "type": "integer"
+              },
+              {
+                "name": "server_datacenter",
+                "type": "string"
+              },
+              {
+                "name": "status",
+                "type": "string"
+              },
+              {
+                "name": "uri",
+                "type": "string"
+              },
+              {
+                "name": "user_agent",
+                "type": "string"
+              }
+            ],
+            "order": [
+              {
+                "field": "_time",
+                "desc": false
+              }
+            ],
+            "groups": [],
+            "range": {
+              "field": "_time",
+              "start": "2026-04-08T18:55:03.511066427Z",
+              "end": "2026-05-08T23:59:59Z"
+            },
+            "columns": [
+              [
+                "2026-04-08T18:55:06.171208143Z",
+                "2026-04-08T18:55:06.171208143Z",
+                "2026-04-08T18:55:06.171208143Z"
+              ],
+              [
+                "2026-04-08T18:55:04Z",
+                "2026-04-08T18:55:04Z",
+                "2026-04-08T18:55:04Z"
+              ],
+              [
+                "text/html",
+                "text/css",
+                "image/jpeg"
+              ],
+              [
+                "Chīrāla",
+                "Los Ranchos de Albuquerque",
+                "Barreiras"
+              ],
+              [
+                "India",
+                "United States",
+                "Brazil"
+              ],
+              [
+                "3eca3da7-8a89-40bf-a66f-bd9b255410ad",
+                "54162c79-6922-4a63-9df7-ec3966e1011d",
+                "9008746b-ab6a-48fc-a393-838227178fc8"
+              ],
+              [
+                true,
+                false,
+                true
+              ],
+              [
+                "GET",
+                "GET",
+                "GET"
+              ],
+              [
+                1.0670452556511076,
+                0.5039790626189883,
+                1.2384481725285963
+              ],
+              [
+                3597,
+                4601,
+                1901
+              ],
+              [
+                77,
+                27,
+                27
+              ],
+              [
+                "BWI",
+                "SEA",
+                "WDC"
+              ],
+              [
+                "200",
+                "500",
+                "201"
+              ],
+              [
+                "/api/v1/textdata/cnfigs",
+                "/api/v1/customer/services",
+                "/api/v1/textdata"
+              ],
+              [
+                "Mozilla/5.0 (X11; OpenBSD i386) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36",
+                "Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.45 Safari/535.19"
+              ]
+            ]
+          }
+        ],
+        "datasetNames": [
+          "sample-http-logs"
+        ],
+        "fieldsMetaMap": {
+          "sample-http-logs": [
+            {
+              "name": "req_duration_ms",
+              "type": "integer|float",
+              "unit": "ms",
+              "hidden": false,
+              "description": ""
+            },
+            {
+              "name": "resp_body_size_bytes",
+              "type": "integer",
+              "unit": "decmbytes",
+              "hidden": false,
+              "description": ""
+            },
+            {
+              "name": "resp_header_size_bytes",
+              "type": "integer",
+              "unit": "Kbits",
+              "hidden": false,
+              "description": ""
+            }
+          ]
+        }
+      }
+    },
+    "Request ran, checking for status error"
+  ]
+}
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "httpResponse": {
+        "statusCode": 200,
+        "body": [
+          {
+            "created": null,
+            "description": "",
+            "edgeDeployment": "cloud.us-east-1.aws",
+            "id": "axiom-audit",
+            "integrationConfigs": null,
+            "kind": "axiom:events:v1",
+            "name": "axiom-audit",
+            "objectFields": null,
+            "retentionDays": 0,
+            "useRetentionPeriod": false,
+            "who": null,
+            "fields": null,
+            "vfields": null
+          },
+          {
+            "created": null,
+            "description": "",
+            "edgeDeployment": "cloud.us-east-1.aws",
+            "id": "otel-demo-metrics",
+            "integrationConfigs": null,
+            "kind": "otel:metrics:v1",
+            "name": "otel-demo-metrics",
+            "objectFields": null,
+            "retentionDays": 0,
+            "useRetentionPeriod": false,
+            "who": null,
+            "fields": null,
+            "vfields": null
+          },
+          {
+            "created": null,
+            "description": "Demo traces from an e-commerce application",
+            "edgeDeployment": "cloud.us-east-1.aws",
+            "id": "otel-demo-traces",
+            "integrationConfigs": null,
+            "kind": "axiom:events:v1",
+            "name": "otel-demo-traces",
+            "objectFields": null,
+            "retentionDays": 0,
+            "useRetentionPeriod": false,
+            "who": null,
+            "fields": null,
+            "vfields": null
+          },
+          {
+            "created": null,
+            "description": "Demo HTTP logs from a web server ",
+            "edgeDeployment": "cloud.us-east-1.aws",
+            "id": "sample-http-logs",
+            "integrationConfigs": null,
+            "kind": "axiom:events:v1",
+            "name": "sample-http-logs",
+            "objectFields": null,
+            "retentionDays": 0,
+            "useRetentionPeriod": false,
+            "who": null,
+            "fields": null,
+            "vfields": null
+          }
+        ],
+        "headers": {
+          "date": "Fri, 08 May 2026 18:55:19 GMT",
+          "content-type": "application/json",
+          "content-length": "1185",
+          "connection": "close",
+          "cache-control": "no-cache, no-store, private, max-age=0",
+          "pragma": "no-cache",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "vary": "Origin, Accept-Encoding",
+          "x-axiom-trace-id": "fe9142a6f5c7c645dde5d4a24c694e2e",
+          "x-content-type-options": "nosniff",
+          "x-ratelimit-limit": "600",
+          "x-ratelimit-remaining": "598",
+          "x-ratelimit-reset": "1778266563",
+          "x-ratelimit-scope": "organization"
+        },
+        "request": {
+          "uri": {
+            "protocol": "https:",
+            "slashes": true,
+            "auth": null,
+            "host": "api.axiom.co",
+            "port": 443,
+            "hostname": "api.axiom.co",
+            "hash": null,
+            "search": null,
+            "query": null,
+            "pathname": "/v1/datasets",
+            "path": "/v1/datasets",
+            "href": "https://api.axiom.co/v1/datasets"
+          },
+          "method": "GET",
+          "headers": {
+            "Authorization": "Bearer xaat-2907e251-7d45-4c88-bda4-62c31ef25afa",
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          }
+        }
+      }
+    },
+    "HTTP Response"
+  ]
+}
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "requestOptions": {
+        "route": "/v1/datasets",
+        "method": "GET",
+        "url": "https://api.axiom.co/v1/datasets",
+        "headers": {
+          "Authorization": "**********",
+          "Content-Type": "application/json"
+        },
+        "json": true
+      },
+      "statusCode": 200,
+      "responseBody": [
+        {
+          "created": null,
+          "description": "",
+          "edgeDeployment": "cloud.us-east-1.aws",
+          "id": "axiom-audit",
+          "integrationConfigs": null,
+          "kind": "axiom:events:v1",
+          "name": "axiom-audit",
+          "objectFields": null,
+          "retentionDays": 0,
+          "useRetentionPeriod": false,
+          "who": null,
+          "fields": null,
+          "vfields": null
+        },
+        {
+          "created": null,
+          "description": "",
+          "edgeDeployment": "cloud.us-east-1.aws",
+          "id": "otel-demo-metrics",
+          "integrationConfigs": null,
+          "kind": "otel:metrics:v1",
+          "name": "otel-demo-metrics",
+          "objectFields": null,
+          "retentionDays": 0,
+          "useRetentionPeriod": false,
+          "who": null,
+          "fields": null,
+          "vfields": null
+        },
+        {
+          "created": null,
+          "description": "Demo traces from an e-commerce application",
+          "edgeDeployment": "cloud.us-east-1.aws",
+          "id": "otel-demo-traces",
+          "integrationConfigs": null,
+          "kind": "axiom:events:v1",
+          "name": "otel-demo-traces",
+          "objectFields": null,
+          "retentionDays": 0,
+          "useRetentionPeriod": false,
+          "who": null,
+          "fields": null,
+          "vfields": null
+        },
+        {
+          "created": null,
+          "description": "Demo HTTP logs from a web server ",
+          "edgeDeployment": "cloud.us-east-1.aws",
+          "id": "sample-http-logs",
+          "integrationConfigs": null,
+          "kind": "axiom:events:v1",
+          "name": "sample-http-logs",
+          "objectFields": null,
+          "retentionDays": 0,
+          "useRetentionPeriod": false,
+          "who": null,
+          "fields": null,
+          "vfields": null
+        }
+      ]
+    },
+    "Request ran, checking for status error"
+  ]
+}
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "httpResponse": {
+        "statusCode": 200,
+        "body": {
+          "format": "tabular",
+          "status": {
+            "elapsedTime": 3240977,
+            "minCursor": "0dhnzrbfl0ge8-08866d3988000c12-00000000",
+            "maxCursor": "0didivc50xiww-0895d7df7600553d-00000c57",
+            "blocksExamined": 355,
+            "blocksCached": 0,
+            "blocksMatched": 0,
+            "blocksSkipped": 0,
+            "rowsExamined": 644060720,
+            "rowsMatched": 0,
+            "numGroups": 0,
+            "isPartial": false,
+            "cacheStatus": 1,
+            "minBlockTime": "2026-04-08T18:40:02Z",
+            "maxBlockTime": "2026-05-08T18:55:17Z",
+            "messages": [
+              {
+                "priority": "warn",
+                "count": 1,
+                "code": "license_limit_for_query_warning",
+                "msg": "Query time range is restricted due to license limit"
+              }
+            ]
+          },
+          "tables": [
+            {
+              "name": "0",
+              "sources": [
+                {
+                  "name": "sample-http-logs"
+                }
+              ],
+              "fields": [
+                {
+                  "name": "_sysTime",
+                  "type": "unknown"
+                },
+                {
+                  "name": "_time",
+                  "type": "unknown"
+                },
+                {
+                  "name": "content_type",
+                  "type": "unknown"
+                },
+                {
+                  "name": "geo.city",
+                  "type": "unknown"
+                },
+                {
+                  "name": "geo.country",
+                  "type": "unknown"
+                },
+                {
+                  "name": "id",
+                  "type": "unknown"
+                },
+                {
+                  "name": "is_tls",
+                  "type": "unknown"
+                },
+                {
+                  "name": "method",
+                  "type": "unknown"
+                },
+                {
+                  "name": "req_duration_ms",
+                  "type": "unknown"
+                },
+                {
+                  "name": "resp_body_size_bytes",
+                  "type": "unknown"
+                },
+                {
+                  "name": "resp_header_size_bytes",
+                  "type": "unknown"
+                },
+                {
+                  "name": "server_datacenter",
+                  "type": "unknown"
+                },
+                {
+                  "name": "status",
+                  "type": "unknown"
+                },
+                {
+                  "name": "uri",
+                  "type": "unknown"
+                },
+                {
+                  "name": "user_agent",
+                  "type": "unknown"
+                }
+              ],
+              "order": [
+                {
+                  "field": "_time",
+                  "desc": false
+                }
+              ],
+              "groups": [],
+              "range": {
+                "field": "_time",
+                "start": "2026-04-08T18:55:19.388313689Z",
+                "end": "2026-05-08T23:59:59Z"
+              },
+              "columns": [
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                [],
+                []
+              ]
+            }
+          ],
+          "datasetNames": [
+            "sample-http-logs"
+          ],
+          "fieldsMetaMap": {
+            "sample-http-logs": [
+              {
+                "name": "req_duration_ms",
+                "type": "integer|float",
+                "unit": "ms",
+                "hidden": false,
+                "description": ""
+              },
+              {
+                "name": "resp_body_size_bytes",
+                "type": "integer",
+                "unit": "decmbytes",
+                "hidden": false,
+                "description": ""
+              },
+              {
+                "name": "resp_header_size_bytes",
+                "type": "integer",
+                "unit": "Kbits",
+                "hidden": false,
+                "description": ""
+              }
+            ]
+          }
+        },
+        "headers": {
+          "date": "Fri, 08 May 2026 18:55:22 GMT",
+          "content-type": "application/json",
+          "transfer-encoding": "chunked",
+          "connection": "close",
+          "cache-control": "no-cache, no-store, private, max-age=0",
+          "pragma": "no-cache",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "vary": "Origin",
+          "x-axiom-query-cost-gbms": "314621",
+          "x-axiom-trace-id": "b3fbc5bff9011f77ae4125bec7aac039",
+          "x-content-type-options": "nosniff",
+          "x-querylimit-limit": "36000000",
+          "x-querylimit-remaining": "35654475",
+          "x-querylimit-reset": "1780941539",
+          "x-ratelimit-limit": "600",
+          "x-ratelimit-remaining": "598",
+          "x-ratelimit-reset": "1778266563",
+          "x-ratelimit-scope": "organization"
+        },
+        "request": {
+          "uri": {
+            "protocol": "https:",
+            "slashes": true,
+            "auth": null,
+            "host": "api.axiom.co",
+            "port": 443,
+            "hostname": "api.axiom.co",
+            "hash": null,
+            "search": "?format=tabular",
+            "query": "format=tabular",
+            "pathname": "/v1/datasets/_apl",
+            "path": "/v1/datasets/_apl?format=tabular",
+            "href": "https://api.axiom.co/v1/datasets/_apl?format=tabular"
+          },
+          "method": "POST",
+          "headers": {
+            "Authorization": "Bearer xaat-2907e251-7d45-4c88-bda4-62c31ef25afa",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Content-Length": 135
+          }
+        }
+      }
+    },
+    "HTTP Response"
+  ]
+}
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "requestOptions": {
+        "route": "/v1/datasets/_apl?format=tabular",
+        "method": "POST",
+        "body": {
+          "apl": "['sample-http-logs'] | where * has \"10.0.0.1\" | limit 3",
+          "startTime": "2025-01-01T00:00:00Z",
+          "endTime": "2026-05-08T23:59:59Z"
+        },
+        "url": "https://api.axiom.co/v1/datasets/_apl?format=tabular",
+        "headers": {
+          "Authorization": "**********",
+          "Content-Type": "application/json"
+        },
+        "json": true
+      },
+      "statusCode": 200,
+      "responseBody": {
+        "format": "tabular",
+        "status": {
+          "elapsedTime": 3240977,
+          "minCursor": "0dhnzrbfl0ge8-08866d3988000c12-00000000",
+          "maxCursor": "0didivc50xiww-0895d7df7600553d-00000c57",
+          "blocksExamined": 355,
+          "blocksCached": 0,
+          "blocksMatched": 0,
+          "blocksSkipped": 0,
+          "rowsExamined": 644060720,
+          "rowsMatched": 0,
+          "numGroups": 0,
+          "isPartial": false,
+          "cacheStatus": 1,
+          "minBlockTime": "2026-04-08T18:40:02Z",
+          "maxBlockTime": "2026-05-08T18:55:17Z",
+          "messages": [
+            {
+              "priority": "warn",
+              "count": 1,
+              "code": "license_limit_for_query_warning",
+              "msg": "Query time range is restricted due to license limit"
+            }
+          ]
+        },
+        "tables": [
+          {
+            "name": "0",
+            "sources": [
+              {
+                "name": "sample-http-logs"
+              }
+            ],
+            "fields": [
+              {
+                "name": "_sysTime",
+                "type": "unknown"
+              },
+              {
+                "name": "_time",
+                "type": "unknown"
+              },
+              {
+                "name": "content_type",
+                "type": "unknown"
+              },
+              {
+                "name": "geo.city",
+                "type": "unknown"
+              },
+              {
+                "name": "geo.country",
+                "type": "unknown"
+              },
+              {
+                "name": "id",
+                "type": "unknown"
+              },
+              {
+                "name": "is_tls",
+                "type": "unknown"
+              },
+              {
+                "name": "method",
+                "type": "unknown"
+              },
+              {
+                "name": "req_duration_ms",
+                "type": "unknown"
+              },
+              {
+                "name": "resp_body_size_bytes",
+                "type": "unknown"
+              },
+              {
+                "name": "resp_header_size_bytes",
+                "type": "unknown"
+              },
+              {
+                "name": "server_datacenter",
+                "type": "unknown"
+              },
+              {
+                "name": "status",
+                "type": "unknown"
+              },
+              {
+                "name": "uri",
+                "type": "unknown"
+              },
+              {
+                "name": "user_agent",
+                "type": "unknown"
+              }
+            ],
+            "order": [
+              {
+                "field": "_time",
+                "desc": false
+              }
+            ],
+            "groups": [],
+            "range": {
+              "field": "_time",
+              "start": "2026-04-08T18:55:19.388313689Z",
+              "end": "2026-05-08T23:59:59Z"
+            },
+            "columns": [
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              [],
+              []
+            ]
+          }
+        ],
+        "datasetNames": [
+          "sample-http-logs"
+        ],
+        "fieldsMetaMap": {
+          "sample-http-logs": [
+            {
+              "name": "req_duration_ms",
+              "type": "integer|float",
+              "unit": "ms",
+              "hidden": false,
+              "description": ""
+            },
+            {
+              "name": "resp_body_size_bytes",
+              "type": "integer",
+              "unit": "decmbytes",
+              "hidden": false,
+              "description": ""
+            },
+            {
+              "name": "resp_header_size_bytes",
+              "type": "integer",
+              "unit": "Kbits",
+              "hidden": false,
+              "description": ""
+            }
+          ]
+        }
+      }
+    },
+    "Request ran, checking for status error"
+  ]
+}
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "httpResponse": {
+        "statusCode": 200,
+        "body": {
+          "format": "tabular",
+          "status": {
+            "elapsedTime": 2453957,
+            "minCursor": "0dho03j2m3qbk-08866d3988000c12-0005344b",
+            "maxCursor": "0dho03j2m3qbk-08866d3988000c12-00053457",
+            "blocksExamined": 4,
+            "blocksCached": 0,
+            "blocksMatched": 0,
+            "blocksSkipped": 0,
+            "rowsExamined": 8388608,
+            "rowsMatched": 884432,
+            "numGroups": 0,
+            "isPartial": false,
+            "cacheStatus": 1,
+            "minBlockTime": "2026-04-08T18:40:02Z",
+            "maxBlockTime": "2026-04-09T04:59:57Z",
+            "messages": [
+              {
+                "priority": "warn",
+                "count": 1,
+                "code": "license_limit_for_query_warning",
+                "msg": "Query time range is restricted due to license limit"
+              }
+            ]
+          },
+          "tables": [
+            {
+              "name": "0",
+              "sources": [
+                {
+                  "name": "sample-http-logs"
+                }
+              ],
+              "fields": [
+                {
+                  "name": "_sysTime",
+                  "type": "datetime"
+                },
+                {
+                  "name": "_time",
+                  "type": "datetime"
+                },
+                {
+                  "name": "content_type",
+                  "type": "string"
+                },
+                {
+                  "name": "geo.city",
+                  "type": "string"
+                },
+                {
+                  "name": "geo.country",
+                  "type": "string"
+                },
+                {
+                  "name": "id",
+                  "type": "string"
+                },
+                {
+                  "name": "is_tls",
+                  "type": "boolean"
+                },
+                {
+                  "name": "method",
+                  "type": "string"
+                },
+                {
+                  "name": "req_duration_ms",
+                  "type": "float"
+                },
+                {
+                  "name": "resp_body_size_bytes",
+                  "type": "integer"
+                },
+                {
+                  "name": "resp_header_size_bytes",
+                  "type": "integer"
+                },
+                {
+                  "name": "server_datacenter",
+                  "type": "string"
+                },
+                {
+                  "name": "status",
+                  "type": "string"
+                },
+                {
+                  "name": "uri",
+                  "type": "string"
+                },
+                {
+                  "name": "user_agent",
+                  "type": "string"
+                }
+              ],
+              "order": [
+                {
+                  "field": "_time",
+                  "desc": false
+                }
+              ],
+              "groups": [],
+              "range": {
+                "field": "_time",
+                "start": "2026-04-08T18:55:58.35232603Z",
+                "end": "2026-05-08T23:59:59Z"
+              },
+              "columns": [
+                [
+                  "2026-04-08T18:56:01.109620232Z",
+                  "2026-04-08T18:56:01.109620232Z",
+                  "2026-04-08T18:56:01.109620232Z"
+                ],
+                [
+                  "2026-04-08T18:55:59Z",
+                  "2026-04-08T18:55:59Z",
+                  "2026-04-08T18:55:59Z"
+                ],
+                [
+                  "image/jpeg",
+                  "image/gif",
+                  "image/jpeg"
+                ],
+                [
+                  "Codó",
+                  "Blumenau",
+                  "Tonantins"
+                ],
+                [
+                  "Brazil",
+                  "Brazil",
+                  "Brazil"
+                ],
+                [
+                  "bf79a2d9-fbdb-41c0-864c-c3eea739cc4a",
+                  "511a97a5-9865-4925-868c-a93be5caf94d",
+                  "1ff1642b-2e68-4a39-8e84-9c7e3576c7a8"
+                ],
+                [
+                  true,
+                  true,
+                  false
+                ],
+                [
+                  "POST",
+                  "DELETE",
+                  "PUT"
+                ],
+                [
+                  0.33524026758191594,
+                  1.8764085634512706,
+                  0.8871169375519399
+                ],
+                [
+                  2086,
+                  4614,
+                  4506
+                ],
+                [
+                  58,
+                  56,
+                  81
+                ],
+                [
+                  "FRA",
+                  "ATL",
+                  "GRU"
+                ],
+                [
+                  "200",
+                  "201",
+                  "200"
+                ],
+                [
+                  "/api/v1/people",
+                  "/api/v1/messages/users",
+                  "/api/v1/purchases/user/id"
+                ],
+                [
+                  "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.17 Safari/537.36",
+                  "Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 5.0; Trident/4.0; FBSMTWB; .NET CLR 2.0.34861; .NET CLR 3.0.3746.3218; .NET CLR 3.5.33652; msn OptimizedIE8;ENUS)",
+                  "Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 5.0; Trident/4.0; FBSMTWB; .NET CLR 2.0.34861; .NET CLR 3.0.3746.3218; .NET CLR 3.5.33652; msn OptimizedIE8;ENUS)"
+                ]
+              ]
+            }
+          ],
+          "datasetNames": [
+            "sample-http-logs"
+          ],
+          "fieldsMetaMap": {
+            "sample-http-logs": [
+              {
+                "name": "req_duration_ms",
+                "type": "integer|float",
+                "unit": "ms",
+                "hidden": false,
+                "description": ""
+              },
+              {
+                "name": "resp_body_size_bytes",
+                "type": "integer",
+                "unit": "decmbytes",
+                "hidden": false,
+                "description": ""
+              },
+              {
+                "name": "resp_header_size_bytes",
+                "type": "integer",
+                "unit": "Kbits",
+                "hidden": false,
+                "description": ""
+              }
+            ]
+          }
+        },
+        "headers": {
+          "date": "Fri, 08 May 2026 18:56:00 GMT",
+          "content-type": "application/json",
+          "transfer-encoding": "chunked",
+          "connection": "close",
+          "cache-control": "no-cache, no-store, private, max-age=0",
+          "pragma": "no-cache",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "vary": "Origin",
+          "x-axiom-query-cost-gbms": "20733",
+          "x-axiom-trace-id": "9e5270752982c21df4d2c024102bd8ed",
+          "x-content-type-options": "nosniff",
+          "x-querylimit-limit": "36000000",
+          "x-querylimit-remaining": "35633742",
+          "x-querylimit-reset": "1780941539",
+          "x-ratelimit-limit": "600",
+          "x-ratelimit-remaining": "596",
+          "x-ratelimit-reset": "1778266563",
+          "x-ratelimit-scope": "organization"
+        },
+        "request": {
+          "uri": {
+            "protocol": "https:",
+            "slashes": true,
+            "auth": null,
+            "host": "api.axiom.co",
+            "port": 443,
+            "hostname": "api.axiom.co",
+            "hash": null,
+            "search": "?format=tabular",
+            "query": "format=tabular",
+            "pathname": "/v1/datasets/_apl",
+            "path": "/v1/datasets/_apl?format=tabular",
+            "href": "https://api.axiom.co/v1/datasets/_apl?format=tabular"
+          },
+          "method": "POST",
+          "headers": {
+            "Authorization": "Bearer xaat-2907e251-7d45-4c88-bda4-62c31ef25afa",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Content-Length": 133
+          }
+        }
+      }
+    },
+    "HTTP Response"
+  ]
+}
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "requestOptions": {
+        "route": "/v1/datasets/_apl?format=tabular",
+        "method": "POST",
+        "body": {
+          "apl": "['sample-http-logs'] | where * has \"Brazil\" | limit 3",
+          "startTime": "2025-01-01T00:00:00Z",
+          "endTime": "2026-05-08T23:59:59Z"
+        },
+        "url": "https://api.axiom.co/v1/datasets/_apl?format=tabular",
+        "headers": {
+          "Authorization": "**********",
+          "Content-Type": "application/json"
+        },
+        "json": true
+      },
+      "statusCode": 200,
+      "responseBody": {
+        "format": "tabular",
+        "status": {
+          "elapsedTime": 2453957,
+          "minCursor": "0dho03j2m3qbk-08866d3988000c12-0005344b",
+          "maxCursor": "0dho03j2m3qbk-08866d3988000c12-00053457",
+          "blocksExamined": 4,
+          "blocksCached": 0,
+          "blocksMatched": 0,
+          "blocksSkipped": 0,
+          "rowsExamined": 8388608,
+          "rowsMatched": 884432,
+          "numGroups": 0,
+          "isPartial": false,
+          "cacheStatus": 1,
+          "minBlockTime": "2026-04-08T18:40:02Z",
+          "maxBlockTime": "2026-04-09T04:59:57Z",
+          "messages": [
+            {
+              "priority": "warn",
+              "count": 1,
+              "code": "license_limit_for_query_warning",
+              "msg": "Query time range is restricted due to license limit"
+            }
+          ]
+        },
+        "tables": [
+          {
+            "name": "0",
+            "sources": [
+              {
+                "name": "sample-http-logs"
+              }
+            ],
+            "fields": [
+              {
+                "name": "_sysTime",
+                "type": "datetime"
+              },
+              {
+                "name": "_time",
+                "type": "datetime"
+              },
+              {
+                "name": "content_type",
+                "type": "string"
+              },
+              {
+                "name": "geo.city",
+                "type": "string"
+              },
+              {
+                "name": "geo.country",
+                "type": "string"
+              },
+              {
+                "name": "id",
+                "type": "string"
+              },
+              {
+                "name": "is_tls",
+                "type": "boolean"
+              },
+              {
+                "name": "method",
+                "type": "string"
+              },
+              {
+                "name": "req_duration_ms",
+                "type": "float"
+              },
+              {
+                "name": "resp_body_size_bytes",
+                "type": "integer"
+              },
+              {
+                "name": "resp_header_size_bytes",
+                "type": "integer"
+              },
+              {
+                "name": "server_datacenter",
+                "type": "string"
+              },
+              {
+                "name": "status",
+                "type": "string"
+              },
+              {
+                "name": "uri",
+                "type": "string"
+              },
+              {
+                "name": "user_agent",
+                "type": "string"
+              }
+            ],
+            "order": [
+              {
+                "field": "_time",
+                "desc": false
+              }
+            ],
+            "groups": [],
+            "range": {
+              "field": "_time",
+              "start": "2026-04-08T18:55:58.35232603Z",
+              "end": "2026-05-08T23:59:59Z"
+            },
+            "columns": [
+              [
+                "2026-04-08T18:56:01.109620232Z",
+                "2026-04-08T18:56:01.109620232Z",
+                "2026-04-08T18:56:01.109620232Z"
+              ],
+              [
+                "2026-04-08T18:55:59Z",
+                "2026-04-08T18:55:59Z",
+                "2026-04-08T18:55:59Z"
+              ],
+              [
+                "image/jpeg",
+                "image/gif",
+                "image/jpeg"
+              ],
+              [
+                "Codó",
+                "Blumenau",
+                "Tonantins"
+              ],
+              [
+                "Brazil",
+                "Brazil",
+                "Brazil"
+              ],
+              [
+                "bf79a2d9-fbdb-41c0-864c-c3eea739cc4a",
+                "511a97a5-9865-4925-868c-a93be5caf94d",
+                "1ff1642b-2e68-4a39-8e84-9c7e3576c7a8"
+              ],
+              [
+                true,
+                true,
+                false
+              ],
+              [
+                "POST",
+                "DELETE",
+                "PUT"
+              ],
+              [
+                0.33524026758191594,
+                1.8764085634512706,
+                0.8871169375519399
+              ],
+              [
+                2086,
+                4614,
+                4506
+              ],
+              [
+                58,
+                56,
+                81
+              ],
+              [
+                "FRA",
+                "ATL",
+                "GRU"
+              ],
+              [
+                "200",
+                "201",
+                "200"
+              ],
+              [
+                "/api/v1/people",
+                "/api/v1/messages/users",
+                "/api/v1/purchases/user/id"
+              ],
+              [
+                "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.17 Safari/537.36",
+                "Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 5.0; Trident/4.0; FBSMTWB; .NET CLR 2.0.34861; .NET CLR 3.0.3746.3218; .NET CLR 3.5.33652; msn OptimizedIE8;ENUS)",
+                "Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 5.0; Trident/4.0; FBSMTWB; .NET CLR 2.0.34861; .NET CLR 3.0.3746.3218; .NET CLR 3.5.33652; msn OptimizedIE8;ENUS)"
+              ]
+            ]
+          }
+        ],
+        "datasetNames": [
+          "sample-http-logs"
+        ],
+        "fieldsMetaMap": {
+          "sample-http-logs": [
+            {
+              "name": "req_duration_ms",
+              "type": "integer|float",
+              "unit": "ms",
+              "hidden": false,
+              "description": ""
+            },
+            {
+              "name": "resp_body_size_bytes",
+              "type": "integer",
+              "unit": "decmbytes",
+              "hidden": false,
+              "description": ""
+            },
+            {
+              "name": "resp_header_size_bytes",
+              "type": "integer",
+              "unit": "Kbits",
+              "hidden": false,
+              "description": ""
+            }
+          ]
+        }
+      }
+    },
+    "Request ran, checking for status error"
+  ]
+}
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "httpResponse": {
+        "statusCode": 200,
+        "body": {
+          "format": "tabular",
+          "status": {
+            "elapsedTime": 1132323,
+            "minCursor": "0dho044nwouf4-08866d3988000c12-000574c3",
+            "maxCursor": "0dho044nwouf4-08866d3988000c12-000574d8",
+            "blocksExamined": 4,
+            "blocksCached": 0,
+            "blocksMatched": 0,
+            "blocksSkipped": 0,
+            "rowsExamined": 8388608,
+            "rowsMatched": 1003329,
+            "numGroups": 0,
+            "isPartial": false,
+            "cacheStatus": 1,
+            "minBlockTime": "2026-04-08T18:40:02Z",
+            "maxBlockTime": "2026-04-09T04:59:57Z",
+            "messages": [
+              {
+                "priority": "warn",
+                "count": 1,
+                "code": "license_limit_for_query_warning",
+                "msg": "Query time range is restricted due to license limit"
+              }
+            ]
+          },
+          "tables": [
+            {
+              "name": "0",
+              "sources": [
+                {
+                  "name": "sample-http-logs"
+                }
+              ],
+              "fields": [
+                {
+                  "name": "_sysTime",
+                  "type": "datetime"
+                },
+                {
+                  "name": "_time",
+                  "type": "datetime"
+                },
+                {
+                  "name": "content_type",
+                  "type": "string"
+                },
+                {
+                  "name": "geo.city",
+                  "type": "string"
+                },
+                {
+                  "name": "geo.country",
+                  "type": "string"
+                },
+                {
+                  "name": "id",
+                  "type": "string"
+                },
+                {
+                  "name": "is_tls",
+                  "type": "boolean"
+                },
+                {
+                  "name": "method",
+                  "type": "string"
+                },
+                {
+                  "name": "req_duration_ms",
+                  "type": "float"
+                },
+                {
+                  "name": "resp_body_size_bytes",
+                  "type": "integer"
+                },
+                {
+                  "name": "resp_header_size_bytes",
+                  "type": "integer"
+                },
+                {
+                  "name": "server_datacenter",
+                  "type": "string"
+                },
+                {
+                  "name": "status",
+                  "type": "string"
+                },
+                {
+                  "name": "uri",
+                  "type": "string"
+                },
+                {
+                  "name": "user_agent",
+                  "type": "string"
+                }
+              ],
+              "order": [
+                {
+                  "field": "_time",
+                  "desc": false
+                }
+              ],
+              "groups": [],
+              "range": {
+                "field": "_time",
+                "start": "2026-04-08T18:56:45.318782391Z",
+                "end": "2026-05-08T23:59:59Z"
+              },
+              "columns": [
+                [
+                  "2026-04-08T18:56:46.645376005Z",
+                  "2026-04-08T18:56:46.645376005Z"
+                ],
+                [
+                  "2026-04-08T18:56:46Z",
+                  "2026-04-08T18:56:46Z"
+                ],
+                [
+                  "text/css",
+                  "image/jpeg"
+                ],
+                [
+                  "West Hills",
+                  "Sonīpat"
+                ],
+                [
+                  "United States",
+                  "India"
+                ],
+                [
+                  "e021474a-c394-4c9b-8cbb-54a61631b5bc",
+                  "2c0b3175-6d21-4e0f-aa45-d9ef77e95633"
+                ],
+                [
+                  true,
+                  true
+                ],
+                [
+                  "POST",
+                  "GET"
+                ],
+                [
+                  0.5598995092170372,
+                  0.5897327632677541
+                ],
+                [
+                  1602,
+                  4987
+                ],
+                [
+                  87,
+                  38
+                ],
+                [
+                  "DCA",
+                  "DCA"
+                ],
+                [
+                  "201",
+                  "301"
+                ],
+                [
+                  "/api/v1/purchases/user/id",
+                  "/api/v1/messages/users"
+                ],
+                [
+                  "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.2; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)",
+                  "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24"
+                ]
+              ]
+            }
+          ],
+          "datasetNames": [
+            "sample-http-logs"
+          ],
+          "fieldsMetaMap": {
+            "sample-http-logs": [
+              {
+                "name": "req_duration_ms",
+                "type": "integer|float",
+                "unit": "ms",
+                "hidden": false,
+                "description": ""
+              },
+              {
+                "name": "resp_body_size_bytes",
+                "type": "integer",
+                "unit": "decmbytes",
+                "hidden": false,
+                "description": ""
+              },
+              {
+                "name": "resp_header_size_bytes",
+                "type": "integer",
+                "unit": "Kbits",
+                "hidden": false,
+                "description": ""
+              }
+            ]
+          }
+        },
+        "headers": {
+          "date": "Fri, 08 May 2026 18:56:46 GMT",
+          "content-type": "application/json",
+          "transfer-encoding": "chunked",
+          "connection": "close",
+          "cache-control": "no-cache, no-store, private, max-age=0",
+          "pragma": "no-cache",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "vary": "Origin",
+          "x-axiom-query-cost-gbms": "9201",
+          "x-axiom-trace-id": "5d78c4bda9b63d792372e0da79ca4e19",
+          "x-content-type-options": "nosniff",
+          "x-querylimit-limit": "36000000",
+          "x-querylimit-remaining": "35624541",
+          "x-querylimit-reset": "1780941539",
+          "x-ratelimit-limit": "600",
+          "x-ratelimit-remaining": "599",
+          "x-ratelimit-reset": "1778266665",
+          "x-ratelimit-scope": "organization"
+        },
+        "request": {
+          "uri": {
+            "protocol": "https:",
+            "slashes": true,
+            "auth": null,
+            "host": "api.axiom.co",
+            "port": 443,
+            "hostname": "api.axiom.co",
+            "hash": null,
+            "search": "?format=tabular",
+            "query": "format=tabular",
+            "pathname": "/v1/datasets/_apl",
+            "path": "/v1/datasets/_apl?format=tabular",
+            "href": "https://api.axiom.co/v1/datasets/_apl?format=tabular"
+          },
+          "method": "POST",
+          "headers": {
+            "Authorization": "Bearer xaat-2907e251-7d45-4c88-bda4-62c31ef25afa",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Content-Length": 130
+          }
+        }
+      }
+    },
+    "HTTP Response"
+  ]
+}
+{
+  "SOURCE": "Logger.trace",
+  "content": [
+    {
+      "requestOptions": {
+        "route": "/v1/datasets/_apl?format=tabular",
+        "method": "POST",
+        "body": {
+          "apl": "['sample-http-logs'] | where * has \"DCA\" | limit 2",
+          "startTime": "2025-01-01T00:00:00Z",
+          "endTime": "2026-05-08T23:59:59Z"
+        },
+        "url": "https://api.axiom.co/v1/datasets/_apl?format=tabular",
+        "headers": {
+          "Authorization": "**********",
+          "Content-Type": "application/json"
+        },
+        "json": true
+      },
+      "statusCode": 200,
+      "responseBody": {
+        "format": "tabular",
+        "status": {
+          "elapsedTime": 1132323,
+          "minCursor": "0dho044nwouf4-08866d3988000c12-000574c3",
+          "maxCursor": "0dho044nwouf4-08866d3988000c12-000574d8",
+          "blocksExamined": 4,
+          "blocksCached": 0,
+          "blocksMatched": 0,
+          "blocksSkipped": 0,
+          "rowsExamined": 8388608,
+          "rowsMatched": 1003329,
+          "numGroups": 0,
+          "isPartial": false,
+          "cacheStatus": 1,
+          "minBlockTime": "2026-04-08T18:40:02Z",
+          "maxBlockTime": "2026-04-09T04:59:57Z",
+          "messages": [
+            {
+              "priority": "warn",
+              "count": 1,
+              "code": "license_limit_for_query_warning",
+              "msg": "Query time range is restricted due to license limit"
+            }
+          ]
+        },
+        "tables": [
+          {
+            "name": "0",
+            "sources": [
+              {
+                "name": "sample-http-logs"
+              }
+            ],
+            "fields": [
+              {
+                "name": "_sysTime",
+                "type": "datetime"
+              },
+              {
+                "name": "_time",
+                "type": "datetime"
+              },
+              {
+                "name": "content_type",
+                "type": "string"
+              },
+              {
+                "name": "geo.city",
+                "type": "string"
+              },
+              {
+                "name": "geo.country",
+                "type": "string"
+              },
+              {
+                "name": "id",
+                "type": "string"
+              },
+              {
+                "name": "is_tls",
+                "type": "boolean"
+              },
+              {
+                "name": "method",
+                "type": "string"
+              },
+              {
+                "name": "req_duration_ms",
+                "type": "float"
+              },
+              {
+                "name": "resp_body_size_bytes",
+                "type": "integer"
+              },
+              {
+                "name": "resp_header_size_bytes",
+                "type": "integer"
+              },
+              {
+                "name": "server_datacenter",
+                "type": "string"
+              },
+              {
+                "name": "status",
+                "type": "string"
+              },
+              {
+                "name": "uri",
+                "type": "string"
+              },
+              {
+                "name": "user_agent",
+                "type": "string"
+              }
+            ],
+            "order": [
+              {
+                "field": "_time",
+                "desc": false
+              }
+            ],
+            "groups": [],
+            "range": {
+              "field": "_time",
+              "start": "2026-04-08T18:56:45.318782391Z",
+              "end": "2026-05-08T23:59:59Z"
+            },
+            "columns": [
+              [
+                "2026-04-08T18:56:46.645376005Z",
+                "2026-04-08T18:56:46.645376005Z"
+              ],
+              [
+                "2026-04-08T18:56:46Z",
+                "2026-04-08T18:56:46Z"
+              ],
+              [
+                "text/css",
+                "image/jpeg"
+              ],
+              [
+                "West Hills",
+                "Sonīpat"
+              ],
+              [
+                "United States",
+                "India"
+              ],
+              [
+                "e021474a-c394-4c9b-8cbb-54a61631b5bc",
+                "2c0b3175-6d21-4e0f-aa45-d9ef77e95633"
+              ],
+              [
+                true,
+                true
+              ],
+              [
+                "POST",
+                "GET"
+              ],
+              [
+                0.5598995092170372,
+                0.5897327632677541
+              ],
+              [
+                1602,
+                4987
+              ],
+              [
+                87,
+                38
+              ],
+              [
+                "DCA",
+                "DCA"
+              ],
+              [
+                "201",
+                "301"
+              ],
+              [
+                "/api/v1/purchases/user/id",
+                "/api/v1/messages/users"
+              ],
+              [
+                "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.2; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)",
+                "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24"
+              ]
+            ]
+          }
+        ],
+        "datasetNames": [
+          "sample-http-logs"
+        ],
+        "fieldsMetaMap": {
+          "sample-http-logs": [
+            {
+              "name": "req_duration_ms",
+              "type": "integer|float",
+              "unit": "ms",
+              "hidden": false,
+              "description": ""
+            },
+            {
+              "name": "resp_body_size_bytes",
+              "type": "integer",
+              "unit": "decmbytes",
+              "hidden": false,
+              "description": ""
+            },
+            {
+              "name": "resp_header_size_bytes",
+              "type": "integer",
+              "unit": "Kbits",
+              "hidden": false,
+              "description": ""
+            }
+          ]
+        }
+      }
+    },
+    "Request ran, checking for status error"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "root": {
+    "path": "",
+    "on_null": "return_empty"
+  },
+  "pipeline": [
+    { "op": "copy", "from": "query",        "to": "reduced_results.query" },
+    { "op": "copy", "from": "datasetName",  "to": "reduced_results.dataset" },
+    { "op": "copy", "from": "rowsMatched",  "to": "reduced_results.rows_matched" },
+    { "op": "copy", "from": "rowsExamined", "to": "reduced_results.rows_examined" },
+    { "op": "copy", "from": "isPartial",    "to": "reduced_results.is_partial" },
+    {
+      "op": "copy",
+      "from": "events[]._time",
+      "to": "reduced_results.event_times"
+    },
+    {
+      "op": "copy",
+      "from": "events[].ip_src",
+      "to": "reduced_results.source_ips"
+    },
+    {
+      "op": "copy",
+      "from": "events[].ip_dst",
+      "to": "reduced_results.dest_ips"
+    },
+    {
+      "op": "copy",
+      "from": "events[].hostname",
+      "to": "reduced_results.hostnames"
+    },
+    {
+      "op": "copy",
+      "from": "events[].username",
+      "to": "reduced_results.usernames"
+    },
+    {
+      "op": "copy",
+      "from": "events[].message",
+      "to": "reduced_results.messages"
+    },
+    {
+      "op": "copy",
+      "from": "events[].severity",
+      "to": "reduced_results.severities"
+    },
+    {
+      "op": "copy",
+      "from": "events[].event_type",
+      "to": "reduced_results.event_types"
+    },
+    { "op": "prune", "strategy": "empty_values", "target": "reduced_results" }
+  ],
+  "output": {
+    "result": "$working.reduced_results"
+  }
+}
