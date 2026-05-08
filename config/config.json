@@ -1,0 +1,114 @@
+{
+  "polarityIntegrationUuid": "65458ad0-dd1c-4bd3-b4c9-909433152650",
+  "name": "Axiom",
+  "acronym": "AXM",
+  "description": "Search Axiom.co datasets using APL queries to cross-correlate IOCs and indicators against forensic event data.",
+  "entityTypes": [
+    "IPv4",
+    "IPv6",
+    "IPv4CIDR",
+    "MD5",
+    "SHA1",
+    "SHA256",
+    "email",
+    "domain",
+    "url",
+    "cve"
+  ],
+  "supportsAdditionalCustomTypes": true,
+  "onDemandOnly": true,
+  "defaultColor": "light-gray",
+  "styles": ["./client/styles.less"],
+  "block": {
+    "component": { "file": "./client/block.js" },
+    "template": { "file": "./client/block.hbs" }
+  },
+  "request": {
+    "cert": "",
+    "key": "",
+    "passphrase": "",
+    "ca": "",
+    "proxy": "",
+    "rejectUnauthorized": true
+  },
+  "logging": { "level": "info" },
+  "options": [
+    {
+      "key": "apiToken",
+      "name": "API Token",
+      "description": "Axiom API Token scoped to your dataset. Recommended over PAT for principle of least privilege. Leave blank if using a Personal Access Token instead.",
+      "default": "",
+      "type": "password",
+      "userCanEdit": false,
+      "adminOnly": true
+    },
+    {
+      "key": "pat",
+      "name": "Personal Access Token (PAT)",
+      "description": "Axiom Personal Access Token with full account access. Requires Org ID to be set. Leave blank if using an API Token instead.",
+      "default": "",
+      "type": "password",
+      "userCanEdit": false,
+      "adminOnly": true
+    },
+    {
+      "key": "orgId",
+      "name": "Org ID",
+      "description": "Your Axiom organization ID. Required only when using a Personal Access Token (PAT). Found in your Axiom org settings.",
+      "default": "",
+      "type": "text",
+      "userCanEdit": false,
+      "adminOnly": true
+    },
+    {
+      "key": "datasetName",
+      "name": "Dataset Name",
+      "description": "The exact name of the Axiom dataset to query (e.g., forensic-events). Must match the dataset name in your Axiom organization.",
+      "default": "",
+      "type": "text",
+      "userCanEdit": false,
+      "adminOnly": true
+    },
+    {
+      "key": "startTime",
+      "name": "Query Start Time",
+      "description": "Optional. ISO 8601 start time for the query window (e.g., 2025-01-01T00:00:00Z). Leave blank to use Axiom's default window.",
+      "default": "",
+      "type": "text",
+      "userCanEdit": true,
+      "adminOnly": false
+    },
+    {
+      "key": "endTime",
+      "name": "Query End Time",
+      "description": "Optional. ISO 8601 end time for the query window (e.g., 2025-05-08T00:00:00Z). Leave blank to default to now.",
+      "default": "",
+      "type": "text",
+      "userCanEdit": true,
+      "adminOnly": false
+    },
+    {
+      "key": "aplTemplate",
+      "name": "APL Query Template",
+      "description": "APL query template. Use {{entity}} as the placeholder for the highlighted value and {{dataset}} for the configured dataset name. Default searches all fields for the entity value.",
+      "default": "['{{dataset}}'] | where * has \"{{entity}}\" | limit 25",
+      "type": "text",
+      "userCanEdit": true,
+      "adminOnly": false
+    },
+    {
+      "key": "deepLinkUrl",
+      "name": "Deep Link URL",
+      "description": "Base URL for your Axiom console (e.g., https://app.axiom.co). Used to build the Open in Axiom link in the overlay.",
+      "default": "https://app.axiom.co",
+      "type": "text",
+      "userCanEdit": false,
+      "adminOnly": true
+    }
+  ],
+  "reducer": {
+    "details": {
+      "file": "./reducers/details.json"
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{! Deep link — always at top so analysts can pivot immediately              }}
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+<div class="axm-deep-link-row">
+  <span class="p-key">Axiom:</span>
+  <span class="p-value">
+    <a href={{details.deepLink}} class="axm-deep-link">
+      {{fa-icon "external-link-alt" fixedWidth=true}} Open in Axiom
+    </a>
+  </span>
+</div>
+
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{! Dataset + elapsed time header                                            }}
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+<div>
+  <span class="p-key">Dataset:</span>
+  <span class="p-value">
+    {{details.datasetName}}
+    {{#if details.elapsedMs}}
+      <span class="axm-elapsed">&middot; {{details.elapsedMs}}ms</span>
+    {{/if}}
+  </span>
+</div>
+
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{! APL query — shown collapsed in a monospace span                          }}
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{#if details.query}}
+  <div>
+    <span class="p-key">Query:</span>
+    <span class="p-value axm-query-mono">{{details.query}}</span>
+  </div>
+{{/if}}
+
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{! Run Query button                                                          }}
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+<div class="axm-run-row">
+  <button
+    class="btn btn-xs btn-default axm-run-btn"
+    {{action "runQuery"}}
+  >
+    {{#if block._state.isQuerying}}
+      {{fa-icon "spinner" spin=true fixedWidth=true}} Searching...
+    {{else}}
+      {{fa-icon "search" fixedWidth=true}} Search Axiom
+    {{/if}}
+  </button>
+</div>
+
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{! Error state                                                               }}
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{#if block._state.error}}
+  <div class="axm-error">
+    {{fa-icon "exclamation-triangle" fixedWidth=true}} {{block._state.error}}
+  </div>
+{{/if}}
+
+{{#if details.queryError}}
+  <div class="axm-error">
+    {{fa-icon "exclamation-triangle" fixedWidth=true}} {{details.queryError}}
+  </div>
+{{/if}}
+
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{! No-results banner                                                         }}
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{#if details.noResults}}
+  {{#if (not block._state.error)}}
+    {{#if (not details.queryError)}}
+      <div class="axm-no-results">
+        {{fa-icon "info-circle" fixedWidth=true}} No events found in
+        <strong>{{details.datasetName}}</strong> for this indicator.
+      </div>
+    {{/if}}
+  {{/if}}
+{{/if}}
+
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{! Results — one card per matching event                                     }}
+{{! ══════════════════════════════════════════════════════════════════════════ }}
+{{#if hasEvents}}
+  {{#each details.events as |event eventIndex|}}
+    <div class="axm-event-card">
+      <div class="axm-event-num">
+        {{fa-icon "file-alt" fixedWidth=true}} Event {{eventIndex}}
+      </div>
+
+      <ul class="nav nav-tabs axm-tabs">
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link {{if (eq event.__activeTab "fields") "active"}}"
+            {{action "changeTab" "fields" eventIndex}}
+          >Fields</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link {{if (eq event.__activeTab "json") "active"}}"
+            {{action "changeTab" "json" eventIndex}}
+          >JSON</a>
+        </li>
+      </ul>
+
+      {{#if (eq event.__activeTab "fields")}}
+        <div class="axm-fields-body">
+          {{#each event.__displayFields as |field|}}
+            <div class="axm-field-row">
+              <span class="p-key">{{field.key}}:</span>
+              <span class="p-value axm-field-value">{{field.value}}</span>
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
+
+      {{#if (eq event.__activeTab "json")}}
+        <div class="axm-json-body">
+          <pre class="axm-json-pre">{{{event.__jsonHighlighted}}}</pre>
+        </div>
+      {{/if}}
+    </div>
+  {{/each}}
+
+  {{! ═══════════════════════════════════════════════ }}
+  {{! Footer — rows examined + partial result warning }}
+  {{! ═══════════════════════════════════════════════ }}
+  <div class="axm-footer">
+    <span class="axm-rows-examined">
+      {{fa-icon "database" fixedWidth=true}} {{formattedRowsExamined}} rows examined
+    </span>
+    {{#if details.isPartial}}
+      <span class="axm-partial-warn">
+        {{fa-icon "exclamation-triangle" fixedWidth=true}} Partial results &mdash; narrow your time range
+      </span>
+    {{/if}}
+  </div>
+{{/if}}
